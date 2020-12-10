@@ -1,9 +1,12 @@
+# Site
 name: "The ChRIS Project"
 title: website
 baseurl: '/jekyll-asciidoc-quickstart/'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-description: The Jekyll AsciiDoc Quickstart project is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.
+description: ChRIS is a general-purpose, open source distributed data and computation platform.
+include: ["_pages"]
+permalink: /:title/
 exclude:
   - vendor
   - LICENSE.adoc
@@ -11,6 +14,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+
+# asciidoc
 asciidoc: {}
 asciidoctor:
   base_dir: :docdir
@@ -19,3 +24,35 @@ asciidoctor:
     - idseparator=_
     - source-highlighter=coderay
     - icons=font
+
+# Authors
+authors:
+  mo:
+    name: mo
+    display_name: Máirín Duffy
+    gravatar: 6538a2e21a4f5358c628382dd63e5be5
+    #email: wowthemesnet@gmail.com
+    web: http://www.bu.edu/rhcollab/people/mairin-duffy/
+    #twitter: https://twitter.com/wowthemesnet
+    description: "Red Hat UX designer working on the ChRIS project."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
