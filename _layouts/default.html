@@ -4,95 +4,244 @@
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
+    <title>{{page.title}} | {{site.name}}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="Your name goes here">
     <meta name="copyright" content="Maybe consider a Creative Commons license">
+<!--
     <link rel="stylesheet" href="{{page.root}}css/foundation.css">
     <link rel="stylesheet" href="{{page.root}}css/font-awesome.css">
     <link rel="stylesheet" href="{{page.root}}css/coderay.css">
     <link rel="stylesheet" href="{{page.root}}css/asciidoctor.css">
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="{{page.root}}/assets/css/screen.css">
     <script src="{{page.root}}js/vendor/modernizr.js"></script>
     <script src="{{page.root}}js/toc.js"></script>
 </head>
-<body>
 
+
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+<body class="{{layout}}" {% if page.url == "/" %}id="home"{% endif %}>
 
 <!-- Nav Bar -->
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
 
-<nav class="top-bar" data-topbar>
-    <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-            <h1>
-                <a href="{{page.root}}">{{site.title}}</a>
-            </h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
+    <div class="container pr-0">
+
+	<!-- Begin Logo -->
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+    </a>
+    <a href="{{ site.baseurl }}/"><h1 class="sitetitle">{{ site.name }}</h1></a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+    
+		{% if page.url == "/about" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                </li>
+   
+		{% if page.url == "/demo" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/demo">Demo</a>
+                </li>
+                
+		{% if page.url == "/plugins" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
+                </li>
+
+		{% if page.url == "/join-us" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/join-us">Join Us</a>
+                </li>
+
+                {% if page.url == "/docs" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/docs">Docs</a>
+                </li>
+
+                {% if page.url == "/code" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/code">Code</a>
+                </li>
+<!--
+                <li class="nav-item">
+
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+            -->
+                {% include search-lunr.html %}
+                
+	                   
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
 </nav>
-<!-- End Nav -->
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+<!-- Top Jumbotron
+================================================== -->
+
+<!-- NOTE:
+
+     If you'd like to make changes to the front page jumbotron, check out the
+     _includes/jumbotron_top.html file in the repo.
+
+-->
+
+
+<!-- Content
+================================================== -->
+
+:page-liquid:
+{% if page.url == "/" %}
+
+<div class="container-fluid" id="jumbo-container">
+    ++++
+    {% include jumbotron_top.html %}
+    {% include jumbotron_front.html %}
+
+</div>
+{% else %}
+{% endif %}
+
+<div class="container" id="content-container">
 
 
 <!-- Main Page Content and Sidebar -->
 
-<div class="row">
+    <!-- Main Content -->
 
-    <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
-
+    <div class="main-content">
         {{ content }}
-
     </div>
 
     <!-- End Main Content -->
 
     <!-- Sidebar -->
 
-    <aside class="large-3 columns">
-
-        <h4>Posts</h4>
-        <ul id="posts" class="posts nav">
-            {% for post in site.posts limit: 5 %}
-            <li><a href="{{ post.url }}">{{ post.navtitle }}</a></li>
-            {% endfor %}
-        </ul>
-
-        <div class="panel">
-            <h5>Featured</h5>
-
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon
-                nulla pork belly cupidatat meatloaf cow.</p>
-        </div>
-
-    </aside>
 
     <!-- End Sidebar -->
-</div>
 
 <!-- End Main Content and Sidebar -->
 
 
 <!-- Footer -->
 
-<footer class="row">
-    <div class="large-12 columns">
-        <hr>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                <img src="{{ site.baseurl }}/assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
+            </div>
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="{{ site.baseurl }}/assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    
         <div class="row">
-            <div class="large-12 columns">
-                <p>Footer</p>
+            <div class="col-md-12 col-sm-12 text-center">  
+            <a href="https://www.fnndsc.org">Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
+	    <!-- {{ site.name }} -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="{{ site.baseurl}}/credits">Credits for this website</a>
             </div>
         </div>
     </div>
-</footer>
 
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+
+<!-- Scripts
+================================================== -->
 <script src="{{page.root}}js/vendor/jquery.js"></script>
-<script src="{{page.root}}js/foundation.min.js"></script>
 <script>
 $(document).foundation();
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+
+{% if site.lazyimages == "enabled" %}
+<script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+{% endif %}
+
+<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+{% if page.layout == 'post' %}
+<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
+{% endif %}
+
+
 </body>
 </html>
