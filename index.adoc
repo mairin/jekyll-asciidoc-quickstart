@@ -27,7 +27,7 @@ baseurl: '/jekyll-asciidoc-quickstart'
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src={{site.baseurl}}assets/images/thumb_creating-chris.jpg" />
+	    <img style="height: 100%; width: 100%;" src="{{site.baseurl}}assets/images/thumb_creating-chris.jpg" />
 	  </div>
     <div class="card-body">
 	    <h4 class="card-title"><a href="https://redhat.com/chris">Creating ChRIS</a></h4>
