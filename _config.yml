@@ -1,5 +1,6 @@
 name: "The ChRIS Project"
 title: website
+baseurl: '/jekyll-asciidoc-quickstart/'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 description: The Jekyll AsciiDoc Quickstart project is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.
