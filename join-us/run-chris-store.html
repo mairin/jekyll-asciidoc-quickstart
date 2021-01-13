@@ -1,0 +1,378 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/jekyll-asciidoc-quickstart//assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run the ChRIS Store | The ChRIS Project</title>
+    <meta name="description" content="ChRIS is a general-purpose, open source distributed data and computation platform.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+<!--
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="/jekyll-asciidoc-quickstart//assets/css/screen.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+</head>
+
+
+
+<body class="layout-page" >
+
+<!-- Nav Bar -->
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+	<!-- Begin Logo -->
+    <a class="navbar-brand" href="/jekyll-asciidoc-quickstart//">
+    <img src="/jekyll-asciidoc-quickstart//assets/images/logo.png" alt="The ChRIS Project">
+    </a>
+    <a href="/jekyll-asciidoc-quickstart//"><h1 class="sitetitle">The ChRIS Project</h1></a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+    
+		
+                <li class="nav-item">
+                
+                <li class="nav-item">
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//about">About</a>
+                </li>
+   
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//demo">Demo</a>
+                </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//plugins">Plugins</a>
+                </li>
+
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//join-us">Join Us</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//docs">Docs</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//code">Code</a>
+                </li>
+<!--
+                <li class="nav-item">
+
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+            -->
+                <script src="/jekyll-asciidoc-quickstart//assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/lunrsearchengine.js"></script>
+                
+	                   
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+<!-- Top Jumbotron
+================================================== -->
+
+<!-- NOTE:
+
+     If you'd like to make changes to the front page jumbotron, check out the
+     _includes/jumbotron_top.html file in the repo.
+
+-->
+
+
+<!-- Content
+================================================== -->
+
+:page-liquid:
+
+
+
+<div class="container" id="content-container">
+
+
+<!-- Main Page Content and Sidebar -->
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+        <section>
+    <div class="section-title">
+        <h2><span>Run the ChRIS Store</span></h2>
+    </div>
+
+    <div class="article-post">
+    <div id="tutorial">
+
+
+<div class="media">
+    <img class="mr-4" src="/assets/images/library/thumb-setupchris-store.png" alt="Set Up ChRIS Store graphic">
+    <div class="media-body">
+        <h3 class="mt-0">Let's get the ChRIS Store running!</h3>
+        In this tutorial, you'll stand up a local instance of the ChRIS Store on your local system. You can use this 
+        setup to push plugins to in order to load them into ChRIS to test a ChRIS admin workflow. You can also follow
+        these instructions to get set up to work on the ChRIS Store itself.
+    </div>
+</div>
+
+<blockquote class="mt-5 mb-5">This tutorial is based on the README files for 
+    <a href="https://github.com/FNNDSC/ChRIS_store_ui">the ChRIS Store UI repository</a>. Where these instructions may 
+    end up differing with those resources, the README files will always be the most up-to-date 
+    and correct. We provide this tutorial as a single comprehensive document to get you started.
+</blockquote>
+
+<h3>Pre-requisites</h3>
+<blockquote><strong>NOTE: </strong>These pre-requisites are the same as in the <a href="join-us/get-chris-running">Get ChRIS Running</a> tutorial. If you have already
+completed that tutorial, you may skip the pre-requisites setup steps below and skip to the next section, "Get the ChRIS
+Store backend running."</blockquote>
+<ul>
+    <li>A laptop or workstation running <strong>Linux</strong> (<a href="https://hub.docker.com/editions/community/docker-ce-server-fedora">Fedora*</a>, 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-centos">CentOS</a>, 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-ubuntu">Ubuntu</a>, or 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-debian">Debian</a>), 
+        <strong><a href="https://www.docker.com/products/docker-desktop">Mac OS X 10.14+</a></strong>, or 
+        <strong><a href="https://www.docker.com/products/docker-desktop">Windows 10</a></strong> (64-bit).
+    </li>
+    <li>Docker 18.06.0+ with Docker Compose 1.22.0+ (Use link for your distro / OS above.)</li>
+    <li>(Linux-only) Your OS user should be in a <code>docker</code> user group. After installing Docker, do the following in a terminal:
+        <ol>
+            <li><code>sudo groupadd docker</code></li>
+            <li><code>sudo usermod -aG docker $USER</code></li>
+            <li>Log out, and log back in.</li>
+        </ol>
+    </li>
+</ul>
+<em>* Due to Docker's lack of support for cgroups v2 and DNFTables, there is no official Docker build for Fedora 32. Follow the instructions in 
+    <a href="https://fedoramagazine.org/docker-and-fedora-32/">this Fedora Magazine article</a> to get Docker running on your Fedora 32 system.</em>
+
+<h3 class="pt-4">Get the ChRIS Store backend running</h3>
+
+<p>After you've met the pre-requisites, you'll need to the ChRIS Store backend up and running.</p>
+
+Open up a terminal on your system and follow these steps:
+
+<ol class="pt-2">
+    <li>
+        <strong>Clone the ChRIS Store backend repo.</strong><br />
+        <code>git clone https://github.com/FNNDSC/ChRIS_store.git</code>
+    </li>
+    <li><strong>Go into the ChRIS Store backend directory.</strong><br />
+        <code>cd ChRIS_store</code>
+    </li>
+    <li>
+        <strong>Make the ChRIS Store.</strong><br />
+        <code>./make.sh up</code>
+    </li>
+</ol>
+
+<h5 class="pt-2">Tearing down the ChRIS Store backend</h5>
+<p>You can later remove all the backend containers and release storage volumes with:</p>
+<pre>
+$ cd ChRIS_store
+$ ./make.sh down
+</pre>
+
+<h3 class="pt-3">Get the ChRIS Store UI frontend up and running</h3>
+
+<p>Now, let's get the web-based UI for the ChRIS Store working. The ChRIS Store UI uses TypeScript, <a href="https://reactjs.org/">React</a>, the <a href="https://patternfly.org">PatternFly</a>
+    React pattern library.</p>
+
+    Open up a terminal on your system and follow these steps:
+
+<ol class="pt-2">
+    <li>
+        <strong>Clone the ChRIS Store UI repo.</strong><br />
+        <code>git clone https://github.com/FNNDSC/ChRIS_store_ui.git</code>
+    </li>
+    <li><strong>Go into the ChRIS UI directory.</strong><br />
+        <code>cd ChRIS_store_ui</code>
+    </li>
+    <li>
+        <strong>Run the ChRIS UI.</strong><br />
+        <code>docker run --rm -it -v $(pwd):/home/localuser -p 3000:3000 -u $(id -u):$(id -g) --name chris_store_ui fnndsc/chris_store_ui:dev</code>
+    </li>
+    <li>
+        <strong>Open the website in a browser.</strong></br />
+        <code><a href="http://localhost:3000">http://localhost:3000</a></code>
+    </li>
+</ol>
+
+<blockquote>
+    <h4>Development Note</h4>
+    <p>Before each commit, a precommit script is run automatically to ensure all tests pass and all JavaScript code follows the Airbnb style guide. 
+        Please note that if you are using the docker commands then you need to run git inside the container. For instance open a new terminal and type:
+        <br />
+        <code>$ docker exec -it chris_store_ui git status</code>
+    </p>
+</blockquote>
+
+More detailed instructions for the ChRIS Store UI are available in <a href="https://github.com/FNNDSC/ChRIS_store_ui">the ChRIS Store UI repository's README</a>.
+
+
+<section id="library">
+
+<h3 class="pt-5">What's Next?</h3>
+
+<p class="pb-4">Now that you've got a got both the ChRIS backend and ChRIS front end running, why not set up the ChRIS store?</p>
+
+<div class="row no-gutters position-relative">
+        <div class="col-md-4 mb-md-0 p-md-4">
+            <img src="/assets/images/library/thumb-setupchris-store.png" class="w-100" alt="...">
+        </div>
+        <div class="col-md-8 position-static p-4 pl-md-0">
+                <h4 class="mt-0"><a href="#" class="stretched-link">Set Up the ChRIS Store</a></h4>
+                <p>If you want to work on the ChRIS store, or need to test loading plugins into a ChRIS instance, you'll need to get the ChRIS store running on your system. Here's how.</p>
+        </div>
+     </div>
+    </div>
+  <!--
+    <div class="article-sidebar col-3" id="page-sidebar">
+        
+    </div>
+-->
+    
+</section>
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+
+    <!-- End Sidebar -->
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                <img src="/jekyll-asciidoc-quickstart//assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
+            </div>
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="/jekyll-asciidoc-quickstart//assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+            <a href="https://www.fnndsc.org">Copyright © 2021 Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
+	    <!-- The ChRIS Project -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="/jekyll-asciidoc-quickstart//credits">Credits for this website</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/vendor/jquery.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/jekyll-asciidoc-quickstart//assets/js/mediumish.js"></script>
+
+
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+
+
+</body>
+</html>

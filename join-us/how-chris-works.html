@@ -1,0 +1,422 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/jekyll-asciidoc-quickstart//assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How ChRIS Works | The ChRIS Project</title>
+    <meta name="description" content="ChRIS is a general-purpose, open source distributed data and computation platform.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+<!--
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="/jekyll-asciidoc-quickstart//assets/css/screen.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+</head>
+
+
+
+<body class="layout-page" >
+
+<!-- Nav Bar -->
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+	<!-- Begin Logo -->
+    <a class="navbar-brand" href="/jekyll-asciidoc-quickstart//">
+    <img src="/jekyll-asciidoc-quickstart//assets/images/logo.png" alt="The ChRIS Project">
+    </a>
+    <a href="/jekyll-asciidoc-quickstart//"><h1 class="sitetitle">The ChRIS Project</h1></a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+    
+		
+                <li class="nav-item">
+                
+                <li class="nav-item">
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//about">About</a>
+                </li>
+   
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//demo">Demo</a>
+                </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//plugins">Plugins</a>
+                </li>
+
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//join-us">Join Us</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//docs">Docs</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//code">Code</a>
+                </li>
+<!--
+                <li class="nav-item">
+
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+            -->
+                <script src="/jekyll-asciidoc-quickstart//assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/lunrsearchengine.js"></script>
+                
+	                   
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+<!-- Top Jumbotron
+================================================== -->
+
+<!-- NOTE:
+
+     If you'd like to make changes to the front page jumbotron, check out the
+     _includes/jumbotron_top.html file in the repo.
+
+-->
+
+
+<!-- Content
+================================================== -->
+
+:page-liquid:
+
+
+
+<div class="container" id="content-container">
+
+
+<!-- Main Page Content and Sidebar -->
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+        <section>
+    <div class="section-title">
+        <h2><span>How ChRIS Works</span></h2>
+    </div>
+
+    <div class="article-post">
+    <div id="tutorial">
+
+
+<div class="media">
+    <img class="mr-4" src="/assets/images/library/thumb-arch.png" alt="ChRIS architecture header image">
+    <div class="media-body">
+        <h3 class="mt-0">Let's get started.</h3>
+        In this tutorial, you'll learn about what ChRIS is, what technologies it's comprised of, and how it is architected.
+    </div>
+</div>
+
+<blockquote class="mt-5 mb-5">This tutorial is based on a presentation, "Medical Image Processing with OpenShift and OpenStack,” given by Dan McPherson (Red Hat), 
+Rudolph Pienaar (Boston Children's Hospital), and Ata Turk (Massachusetts Open Cloud) at the Red Hat Summit in 2018. 
+<a href="https://youtu.be/p1Y9wlPSgt4">The full video of this presentation is available</a>, but for the purposes of this tutorial 
+we have broken it down into chunks summarizing each section and linking directly to the timestamp where that part of the presentation begins.
+</blockquote>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!---
+        <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/preso-landscape.png" alt="Card image cap">
+      -->
+        <div class="card-body">
+          <h5 class="card-title">The Landscape of Medical Image Processing Tools</h5>
+          <p class="card-text">We begin with a brief background on the landscape of medical image processing tools to
+              better understand the context driving the technological and architectural choices made in ChRIS.</p>
+            <p class="card-text">
+              Computational research tends to happen in relative isolation, and researchers tend to build their own platform. The focus is 
+              on solving very difficult problems more efficiently, accurately, and rapidly; there aren’t incentives to build a system that’s 
+              easy to run, can be used for more general problems, or that will ever leave the lab it was created in. ChRIS aims to provide 
+              a better infrastructure for researchers to build cleaner solutions.
+            </p>
+          <a href="https://youtu.be/p1Y9wlPSgt4" class="btn btn-primary">Watch video</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+          <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4?start=184" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--
+            <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/preso-basics.png" alt="Card image cap">
+-->
+            <div class="card-body">
+          <h5 class="card-title">ChRIS Basics</h5>
+            <p class="card-text">“There is about two decades worth of amazing tools that exist in the research community, but these almost 
+                never make it out to the clinical front lines,” Rudolph explains. “No clinician is ever going to fire up a Linux terminal, 
+                type in some commands, think about SSH and SCP and login to a cluster—it’s never going to happen.”</p>
+
+            <p class="card-text">Providing a simple user interface for clinicians to be able to benefit from this computing power is a big piece of the vision for ChRIS.
+                    ChRIS is comprised of containerized, microservice open source tools that communicate with each other via REST-based APIs in order
+                    to enable that vision.
+            </p>
+          <a href="https://youtu.be/p1Y9wlPSgt4?t=184" class="btn btn-primary">Watch video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+        <div class="col-sm-6">
+          <div class="card">
+              <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4?start=343" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="card-body">
+              <h5 class="card-title">Massachusetts Open Cloud</h5>
+              <p class="card-text">The Massachusetts Open Cloud (MOC) is a collaborative effort between research universities, government, and industry.</p> 
+              
+              <p class="card-text">Unlike large commercial clouds, 
+                  MOC provides an open ecosystem of cloud services backed by OpenStack and OpenShift. The MOC operates in datacenter with a 15 
+                  Megawatts capacity and 2 acres of computing space—it is about half the size of the average Google datacenter. </p>
+                <p class="card-text">
+                    MOC is particularly interested in the healthcare space—hospitals are generating more and more data and facing challenges in maintaining and 
+                    analyzing it. MOC is interested in running industry-level healthcare applications on their cloud 
+                    to analyze and learn from. Healthcare applications can also gain access to the MOC's computing capacity without having to hand their data over to a large commercial cloud.
+                </p>
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=343" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+              <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4?start=691" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="card-body">
+              <h5 class="card-title">The Technology</h5>
+                <p class="card-text">Everything in ChRIS is built as OCI / docker images, including the image processing tools. With ChRIS, anyone can take an existing 
+                    tool, containerize it, and gain portability to run it anywhere from a single laptop to a full production environment.</p>
+                    
+                <p class="card-text">OpenShift allows for scaling jobs running image processors in ChRIS using resource management 
+                    (CPU/Memory/Network/GPU). It also provides operational standardization for logging, metrics, and cluster management.</p>
+                <p class="card-text">Another area of focus is around Artifical Intelligence (AI) and Machine Learning (ML), e.g. Spark and Tensorflow. 
+                    A lot of research is looking to use ML technologies in this space, but it’s not yet gained wide adoption in production.</p>
+                        
+                        
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=691" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+  <div class="row mt-5">
+        <div class="col-sm-6">
+          <div class="card">
+              <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4?start=1016" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Medical Image Processing</h5>
+              <p class="card-text">There are specific techniques that are particularly useful in the context of medical image processing 
+                  and the types of image processing ChRIS plugins might typically do:</p> 
+
+            <p class="card-text">
+                <dl>
+                <dt>Registration</dt>
+                <dd>When you take one image and match it into the space of another image.</dd>
+                <dt>Classification (AI/ML)</dt> 
+                <dd>Automatically recognizes different structures in a scan, for example, a tumor.</dd>
+                <dt>Metabolism</dt> 
+                <dd>Uses the dispersion, reflection, and refraction of light within the brain to indicate oxygen metabolism in a brain.</dd>
+                <dt>Tractography</dt> 
+                <dd>When you scan the same image from slightly different angles, solve diffusion equation, and build 3D image from it.</dd>
+                </dl>
+
+            </p>
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=1016" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+              <iframe style="min-height: 315px" class="card-img-top" src="https://www.youtube.com/embed/p1Y9wlPSgt4?start=1218" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="card-body">
+              <h5 class="card-title">ChRIS Architecture Overview</h5>
+                <p class="card-text">ChRIS, from within Boston Children's Hospital, retrieves image data from a data source and image processing 
+                    plugin container from a plugin store and pushes them to the Massachusetts Open Cloud via an IO handler in MOC's OpenShift. Once computation 
+                    is finished, the plugin output is retrieved back into ChRIS.</p>
+                    
+                <p class="card-text">When ChRIS pushes data to the MOC, that data is stored in Swift within MOC's OpenStack. This is to enable data segmentation between jobs. 
+                    When ChRIS pushes a plugin to the MOC, the OpenShift process manager processes the plugin container launches it into a job starting with an init container 
+                    that pulls the data out of Swift and makes it available for the image plugin container, which passes its result to a publish 
+                    container that passes the data to Swift, and the IO Handler passes the output data back to ChRIS.</p>
+                <p class="card-text">The image processor doesn’t have to understand the environment around it. All it has to know is how to read and write data from the disk.</p>
+                        
+                        
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=1218" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<section id="library">
+
+<h3 class="pt-5">What's Next?</h3>
+
+<p class="pb-4">Now that you've got a good idea of what ChRIS is, what kinds of computation ChRIS enables, the technology behind ChRIS, and the basic structure of 
+    its architecture, why not get started running ChRIS on your own?</p>
+
+<div class="row no-gutters position-relative">
+    <div class="col-md-4 mb-md-0 p-md-4">
+        <img src="/assets/images/library/thumb-setupchris.png" class="w-100" alt="...">
+    </div>
+    <div class="col-md-8 position-static p-4 pl-md-0">
+        <h4 class="mt-0"><a href="/join-us/get-chris-running" class="stretched-link">Get ChRIS Up and Running on Your Laptop</a></h4>
+        <p>Here's a full set of instructions to get ChRIS running on your local system so you can start working with the codebase.</p>
+    </div>
+ </div>
+    </div>
+  <!--
+    <div class="article-sidebar col-3" id="page-sidebar">
+        
+    </div>
+-->
+    
+</section>
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+
+    <!-- End Sidebar -->
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                <img src="/jekyll-asciidoc-quickstart//assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
+            </div>
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="/jekyll-asciidoc-quickstart//assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+            <a href="https://www.fnndsc.org">Copyright © 2021 Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
+	    <!-- The ChRIS Project -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="/jekyll-asciidoc-quickstart//credits">Credits for this website</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/vendor/jquery.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/jekyll-asciidoc-quickstart//assets/js/mediumish.js"></script>
+
+
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/jekyll-asciidoc-quickstart//assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChRIS preliminary workflow&#8201;&#8212;&#8201;pfurl | The ChRIS Project</title>
+    <meta name="description" content="ChRIS is a general-purpose, open source distributed data and computation platform.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+<!--
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="/jekyll-asciidoc-quickstart//assets/css/screen.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+</head>
+
+
+
+<body class="layout-page" >
+
+<!-- Nav Bar -->
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+	<!-- Begin Logo -->
+    <a class="navbar-brand" href="/jekyll-asciidoc-quickstart//">
+    <img src="/jekyll-asciidoc-quickstart//assets/images/logo.png" alt="The ChRIS Project">
+    </a>
+    <a href="/jekyll-asciidoc-quickstart//"><h1 class="sitetitle">The ChRIS Project</h1></a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+    
+		
+                <li class="nav-item">
+                
+                <li class="nav-item">
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//about">About</a>
+                </li>
+   
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//demo">Demo</a>
+                </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//plugins">Plugins</a>
+                </li>
+
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//join-us">Join Us</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//docs">Docs</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//code">Code</a>
+                </li>
+<!--
+                <li class="nav-item">
+
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+            -->
+                <script src="/jekyll-asciidoc-quickstart//assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/lunrsearchengine.js"></script>
+                
+	                   
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+<!-- Top Jumbotron
+================================================== -->
+
+<!-- NOTE:
+
+     If you'd like to make changes to the front page jumbotron, check out the
+     _includes/jumbotron_top.html file in the repo.
+
+-->
+
+
+<!-- Content
+================================================== -->
+
+:page-liquid:
+
+
+
+<div class="container" id="content-container">
+
+
+<!-- Main Page Content and Sidebar -->
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+        <section>
+    <div class="section-title">
+        <h2><span>ChRIS preliminary workflow&#8201;&#8212;&#8201;pfurl</span></h2>
+    </div>
+
+    <div class="article-post">
+    <div class="sect1">
+<h2 id="abstract">Abstract</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page describes preliminary interactions with the ChRIS Ultron Back End (CUBE) using <code>pfurl</code>. It logs in, and queries for available plugins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="preconditions">Preconditions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="host_ip_env_variable">HOST_IP env variable</h3>
+<div class="paragraph">
+<p>You should set an environment variable, <code><code>HOST_IP</code></code> to the IP of the actual host you are using. In Linux, this is</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">export HOST_IP=$(ip route | grep -v docker | awk '{if(NF==11) print $9}')</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="swarm_mode">Swarm mode</h3>
+<div class="paragraph">
+<p>In the default setup using <code><code>docker</code></code>, be sure to initialize swarm mode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">docker swarm init</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="backend_user">Backend user</h3>
+<div class="paragraph">
+<p>At least one user with name/password combination as</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>chris</code>/<code>chris1234</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="containerized_dataprocessing_services">Containerized data/processing services:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>pfcon</code></p>
+</li>
+<li>
+<p><code>pfioh</code></p>
+</li>
+<li>
+<p><code>pman</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>as started by the <code>docker-make-chris_dev.sh</code> shell script in the source repository checkout.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="start_system">Start system</h3>
+<div class="paragraph">
+<p>In the source repo of CUBE, simply do a</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">*make*</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get_homepage">GET homepage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="call">Call</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">pfurl --auth chris:chris1234 --verb GET --raw --http ${HOST_IP}:8000/api/v1/ \
+    --quiet --jsonpprintindent 4</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="receive">Receive</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="javascript">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">collection</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">items</span><span class="delimiter">&quot;</span></span>: [ ],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [
+      { <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/tags/</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">tags</span><span class="delimiter">&quot;</span></span> },
+      { <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">plugins</span><span class="delimiter">&quot;</span></span> }
+    ],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">queries</span><span class="delimiter">&quot;</span></span>: [
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">min_id</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">max_id</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">min_creation_date</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">max_creation_date</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/search/</span><span class="delimiter">&quot;</span></span>,
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">search</span><span class="delimiter">&quot;</span></span>
+      }
+    ],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">version</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/</span><span class="delimiter">&quot;</span></span>
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get_list_of_plugins">GET list of plugins</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="call_2">Call</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">pfurl --auth chris:chris1234 --http ${HOST_IP}:8000/api/v1/plugins/ \
+    --quiet --jsonpprintindent 4</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="receive_2">Receive</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="javascript">{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">collection</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">items</span><span class="delimiter">&quot;</span></span>: [
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/2/parameters/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">parameters</span><span class="delimiter">&quot;</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/2/instances/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">instances</span><span class="delimiter">&quot;</span></span>
+          }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">simpledsapp</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dock_image</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fnndsc/pl-simpledsapp</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">ds</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/2/</span><span class="delimiter">&quot;</span></span>
+      },
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/4/parameters/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">parameters</span><span class="delimiter">&quot;</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/4/instances/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">instances</span><span class="delimiter">&quot;</span></span>
+          }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">pacsretrieve</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dock_image</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fnndsc/pl-pacsretrieve</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">ds</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/4/</span><span class="delimiter">&quot;</span></span>
+      },
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/1/parameters/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">parameters</span><span class="delimiter">&quot;</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/1/instances/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">instances</span><span class="delimiter">&quot;</span></span>
+          }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">simplefsapp</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dock_image</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fnndsc/pl-simplefsapp</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fs</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/1/</span><span class="delimiter">&quot;</span></span>
+      },
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/3/parameters/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">parameters</span><span class="delimiter">&quot;</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/3/instances/</span><span class="delimiter">&quot;</span></span>,
+            <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">instances</span><span class="delimiter">&quot;</span></span>
+          }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">pacsquery</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dock_image</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fnndsc/pl-pacsquery</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">fs</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/3/</span><span class="delimiter">&quot;</span></span>
+      }
+    ],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">links</span><span class="delimiter">&quot;</span></span>: [{ <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">feeds</span><span class="delimiter">&quot;</span></span> }],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">queries</span><span class="delimiter">&quot;</span></span>: [
+      {
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: [
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">dock_image</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">min_creation_date</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> },
+          { <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">max_creation_date</span><span class="delimiter">&quot;</span></span>, <span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span> }
+        ],
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/search/</span><span class="delimiter">&quot;</span></span>,
+        <span class="key"><span class="delimiter">&quot;</span><span class="content">rel</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">search</span><span class="delimiter">&quot;</span></span>
+      }
+    ],
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">version</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">href</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">http://10.17.24.163:8000/api/v1/plugins/</span><span class="delimiter">&quot;</span></span>
+  }
+}
+<span class="error">`</span><span class="error">`</span><span class="error">`</span><span class="error">`</span>
+
+In the above, the <span class="error">`</span><span class="error">`</span>pl-simplefsapp<span class="error">`</span><span class="error">`</span> plugin<span class="string"><span class="delimiter">'</span><span class="content">s instances collection is at ``http://10.17.24.163:8000/api/v1/plugins/1/instances/``.
+
+## Run the ``pl-simplefsapp`` container
+
+### Call
+
+#### Using httpie
+```bash
+http -a chris:chris1234 POST http://${HOST_IP}:8000/api/v1/plugins/1/instances/ </span><span class="content">\
+</span><span class="content">Content-Type:application/vnd.collection+json </span><span class="content">\
+</span><span class="content">Accept:application/vnd.collection+json </span><span class="content">\
+</span><span class="content">template:=</span><span class="delimiter">'</span></span>{<span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>:[{<span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">dir</span><span class="delimiter">&quot;</span></span>,<span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">./</span><span class="delimiter">&quot;</span></span>}, {<span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">previous</span><span class="delimiter">&quot;</span></span>,<span class="key"><span class="delimiter">&quot;</span><span class="content">value</span><span class="delimiter">&quot;</span></span>:<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>}]}<span class="string"><span class="delimiter">'</span></span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using_pfurl">Using pfurl</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">pfurl --auth chris:chris1234 --verb POST --http ${HOST_IP}:8000/api/v1/plugins/1/instances/ \
+--content-type application/vnd.collection+json \
+--jsonwrapper 'template' --msg '
+{&quot;data&quot;:
+    [{&quot;name&quot;:&quot;dir&quot;,
+      &quot;value&quot;:&quot;./&quot;},
+     {&quot;name&quot;:&quot;previous&quot;,
+      &quot;value&quot;:&quot;&quot;}]
+}' \
+--quiet --jsonpprintindent 4</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+  <!--
+    <div class="article-sidebar col-3" id="page-sidebar">
+        
+    </div>
+-->
+    
+</section>
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+
+    <!-- End Sidebar -->
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                <img src="/jekyll-asciidoc-quickstart//assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
+            </div>
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="/jekyll-asciidoc-quickstart//assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+            <a href="https://www.fnndsc.org">Copyright © 2021 Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
+	    <!-- The ChRIS Project -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="/jekyll-asciidoc-quickstart//credits">Credits for this website</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/vendor/jquery.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/jekyll-asciidoc-quickstart//assets/js/mediumish.js"></script>
+
+
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/jekyll-asciidoc-quickstart//assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | The ChRIS Project</title>
+    <meta name="description" content="ChRIS is a general-purpose, open source distributed data and computation platform.">
+    <meta name="author" content="Your name goes here">
+    <meta name="copyright" content="Maybe consider a Creative Commons license">
+<!--
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/coderay.css">
+    <link rel="stylesheet" href="css/asciidoctor.css">
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="/jekyll-asciidoc-quickstart//assets/css/screen.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/toc.js"></script>
+</head>
+
+
+
+<body class="layout-page" >
+
+<!-- Nav Bar -->
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+	<!-- Begin Logo -->
+    <a class="navbar-brand" href="/jekyll-asciidoc-quickstart//">
+    <img src="/jekyll-asciidoc-quickstart//assets/images/logo.png" alt="The ChRIS Project">
+    </a>
+    <a href="/jekyll-asciidoc-quickstart//"><h1 class="sitetitle">The ChRIS Project</h1></a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+    
+		
+                <li class="nav-item">
+                
+                <li class="nav-item">
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//about">About</a>
+                </li>
+   
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//demo">Demo</a>
+                </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//plugins">Plugins</a>
+                </li>
+
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//join-us">Join Us</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//docs">Docs</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/jekyll-asciidoc-quickstart//code">Code</a>
+                </li>
+<!--
+                <li class="nav-item">
+
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+            -->
+                <script src="/jekyll-asciidoc-quickstart//assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/lunrsearchengine.js"></script>
+                
+	                   
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+<!-- Top Jumbotron
+================================================== -->
+
+<!-- NOTE:
+
+     If you'd like to make changes to the front page jumbotron, check out the
+     _includes/jumbotron_top.html file in the repo.
+
+-->
+
+
+<!-- Content
+================================================== -->
+
+:page-liquid:
+
+
+
+<div class="container" id="content-container">
+
+
+<!-- Main Page Content and Sidebar -->
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+        <section>
+    <div class="section-title">
+        <h2><span></span></h2>
+    </div>
+
+    <div class="article-post">
+    <div class="sect1">
+<h2 id="development_environment">Development environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a Django-MySQL project.</p>
+</div>
+<div class="paragraph">
+<p>On ubuntu:</p>
+</div>
+<div class="paragraph">
+<p><strong>NB: do NOT set a root password for the mysql data base in the following!</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>sudo apt-get update
+sudo apt-get install git
+sudo apt-get install mysql-server
+sudo apt-get install apache2 apache2-dev
+sudo apt-get install python-pip python3-dev libmysqlclient-dev
+sudo apt-get install libssl-dev libcurl4-openssl-dev
+sudo pip install virtualenv virtualenvwrapper</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create a directory for your virtual environments e.g.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mkdir ~/Python_Envs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You might want to add to your .bashrc file these two lines:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>export WORKON_HOME=~/Python_Envs
+source /usr/local/bin/virtualenvwrapper.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can source your .bashrc and create a new Python3 virtual environment:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>source .bashrc
+mkvirtualenv --python=python3 chris_env</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To activate chris_env:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>workon chris_env</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To deactivate chris_env:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>deactivate</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="development_database">Development database:</h3>
+<div class="paragraph">
+<p>To create the development database, do</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>sudo mysql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now create a local database on MySQL&#8217;s shell:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>CREATE DATABASE chris_dev CHARACTER SET utf8;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This ensures all tables and columns will use UTF-8 by default</p>
+</div>
+<div class="paragraph">
+<p>Grant all privileges to user chris on the database:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>GRANT ALL ON chris_dev.* TO 'chris'@'localhost' IDENTIFIED BY 'Chris1234';</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="check_out_the_repo">Check out the repo</h3>
+<div class="paragraph">
+<p>Now, check out the repo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>git clone https://github.com/FNNDSC/ChRIS_ultron_backEnd.git</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dependencies">Dependencies:</h3>
+<div class="paragraph">
+<p>This project uses requirement files to install dependencies in chris_env through pip:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd ChRIS_ultron_backEnd
+pip install -r requirements/local.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To list installed dependencies in chris_env:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>pip freeze --local</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="testing">Testing:</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd chris_backend
+python manage.py migrate
+python manage.py test</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If errors are gotten because of user chris not having enough database privilages then
+just give it all privilages in mysql:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>GRANT ALL PRIVILEGES ON *.* TO 'chris'@'localhost';</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="first_steps">First steps</h3>
+<div class="paragraph">
+<p>(See here for detailed instructions:</p>
+</div>
+<div class="paragraph">
+<p>First, create two users (one called 'chris' and one called &lt;yourusername&gt;)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code># for user 'chris'
+python manage.py createsuperuser</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and again:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code># for user &lt;yourusername&gt;
+python manage.py createsuperuser</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can start the backend server</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>python manage.py runserver</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Perform a simple GET request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>http http://127.0.0.1:8000/api/v1/</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="troubleshooting">Troubleshooting</h4>
+<div class="paragraph">
+<p>You might experience some issues with localhost/actual IP depending on local setup and possibly if you have a proxy. In that case, start the server with an actual &lt;IP&gt;:&lt;port&gt;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>python manage.py runserver XXX.YYY.ZZZ.WWW:8000</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and connect to it explicitly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>http http://XXX.YYY.ZZZ.WWW:8000/</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="testing_the_api_over_https">Testing the API over HTTPS</h3>
+<div class="paragraph">
+<p>Run modwsgi Apache-based server:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>python manage.py runmodwsgi --host 0.0.0.0 --port 8001 --https-port 8000 --ssl-certificate-file ../utils/ssl_cert/local.crt --ssl-certificate-key-file ../utils/ssl_cert/local.key --processes 8 --server-name localhost --https-only --reload-on-changes</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make requests over https with the self-signed SSL certificate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>http https://localhost:8000/api/v1/ --verify=../utils/ssl_cert/local.crt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Self-signed "localhost" certificates can be generated again if necessary:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -keyout local.key -out local.crt  (server name should be set to &quot;localhost&quot; in the interactive questions)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="documentation">Documentation</h3>
+<div class="paragraph">
+<p>Available [here](<a href="https://fnndsc.github.io/ChRIS_ultron_backEnd" class="bare">https://fnndsc.github.io/ChRIS_ultron_backEnd</a>).</p>
+</div>
+<div class="paragraph">
+<p>Install Sphinx and the http extension (useful to document the REST API)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>pip install Sphinx
+pip install sphinxcontrib-httpdomain</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Build the html documentation</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd docs/
+make html</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+  <!--
+    <div class="article-sidebar col-3" id="page-sidebar">
+        
+    </div>
+-->
+    
+</section>
+    </div>
+
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+
+
+    <!-- End Sidebar -->
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                <img src="/jekyll-asciidoc-quickstart//assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
+            </div>
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="/jekyll-asciidoc-quickstart//assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+            <a href="https://www.fnndsc.org">Copyright © 2021 Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
+	    <!-- The ChRIS Project -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="/jekyll-asciidoc-quickstart//credits">Credits for this website</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+
+<!-- Scripts
+================================================== -->
+<script src="js/vendor/jquery.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/jekyll-asciidoc-quickstart//assets/js/mediumish.js"></script>
+
+
+
+<script src="/jekyll-asciidoc-quickstart//assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+
+
+</body>
+</html>
