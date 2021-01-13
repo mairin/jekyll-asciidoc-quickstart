@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section>
+    <div class="section-title">
+        <h2><span>{{ page.title }}</span></h2>
+    </div>
+
+    <div class="article-post">
+        {% for item in site.data.docslist.toc %}
+            <h3>{{ item.title }}</h3>
+              <ul>
+                {% for entry in item.subfolderitems %}
+                  <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+                {% endfor %}
+              </ul>
+        {% endfor %}
+    {{content}}
+    </div>
+  <!--
+    <div class="article-sidebar col-3" id="page-sidebar">
+        {% if page.sidebar %}
+         {% include {{ page.sidebar }} %}
+        {% endif %}
+    </div>
+-->
+    {% if page.comments == true %}
+
+    <div id="comments" class="row mb-5">
+        <div class="col-md-8">
+            {% include disqus.html %}
+        </div>
+    </div>
+
+    {% endif %}
+</section>

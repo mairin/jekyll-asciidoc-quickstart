@@ -74,9 +74,12 @@ Watch the full story of the origins around the ChRIS project in part 1 of Red Ha
 
 <h5>Who works on ChRIS?</h5>
 
+<!-- 
+:page-liquid:
+++++
 {% include people.html %}
-
-
+++++
+-->
 
 
 </div>

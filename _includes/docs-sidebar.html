@@ -1,3 +1,13 @@
+:page-liquid:
+++++
+<h2>test {{ site.data.docslist.docs_list_title }}</h2>
+<ul>
+   {% for item in site.data.docslist.docs %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
+++++
+
 <h1 id="quicklinks">Quicklinks</h1>
 
 <h2>Chat</h2>

@@ -1,0 +1,37 @@
+toc:
+  - category: Quickstart Guides
+    subfolderitems:
+      - title: How ChRIS Works
+        url: join-us/how-chris-works.html
+        image: assets/images/library/thumb-arch.png
+        excerpt: "Start here to get an overview of what ChRIS is, what technologies it used, and how it is architected. Video and text summary available."
+      - title: How to Get ChRIS Running
+        url: join-us/get-chris-running.html
+        image: assets/images/library/thumb-setupchris.png
+        excerpt: "Here's a full set of instructions to get ChRIS running on your local system so you can start working with the codebase."
+      - title: Run the ChRIS Store
+        url: join-us/run-chris-store.html
+        image: assets/images/library/thumb-setupchris-store.png
+        excerpt: "If you want to work on the ChRIS store, or need to test loading plugins into a ChRIS instance, you'll need to get the ChRIS store running on your system. Here's how."
+  - category: ChRIS Plugin Workflow Guides
+    subfolderitems:
+      - title: Upload Files to CUBE and Create a New Top-Level Feed
+        url: docs/ChRIS-preliminary-workflow-intro
+        excerpt: "This page provides instructions that allow for the 'upload' of data into the ChRIS Ultron Back End (CUBE) and also creating a new top-level feed containing this uploaded data."
+      - title: Working with DICOM Images
+        url: /piece2
+        excerpt: "These tutorials cover anonymizing DICOM images, converting DICOM to jpg and inverting intensities, and extracting DICOM metadata."
+      - title: Working with PACS
+        url: /piece3
+        excerpt: "These tutorials cover querying PACS for data as well as retrieving data from PACS."
+      - title: Example Workflow Tutorials
+        url: /piece3
+        excerpt: "Walkthrough how to create a FreeSurfer Heatmap via multi-party compute, and how to segment prostate images via a trained neural network."
+  - category: ChRIS Backend Development Guide
+    subfolderitems:
+      - title: Widget 1
+        url: /widget1.html
+      - title: Widget 2
+        url: /widget2.html
+      - title: Widget 3
+        url: /widget3.html

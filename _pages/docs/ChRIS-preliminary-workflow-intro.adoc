@@ -1,0 +1,222 @@
+---
+layout: page
+title: ChRIS preliminary workflow -- pfurl
+permalink: docs/ChRIS-preliminary-workflow-intro
+---
+# ChRIS preliminary workflow -- pfurl
+
+## Abstract
+
+This page describes preliminary interactions with the ChRIS Ultron Back End (CUBE) using ``pfurl``. It logs in, and queries for available plugins.
+
+## Preconditions
+
+### HOST_IP env variable
+
+You should set an environment variable, ```HOST_IP``` to the IP of the actual host you are using. In Linux, this is
+
+```bash
+export HOST_IP=$(ip route | grep -v docker | awk '{if(NF==11) print $9}')
+```
+
+### Swarm mode
+
+In the default setup using ```docker```, be sure to initialize swarm mode:
+
+```bash
+docker swarm init
+```
+
+### Backend user
+
+At least one user with name/password combination as
+
+* ``chris``/``chris1234``
+
+### Containerized data/processing services:
+
+* ``pfcon``
+* ``pfioh``
+* ``pman``
+
+as started by the ``docker-make-chris_dev.sh`` shell script in the source repository checkout.
+
+### Start system
+
+In the source repo of CUBE, simply do a 
+
+```bash
+*make*
+```
+
+## GET homepage
+
+### Call
+
+```bash
+pfurl --auth chris:chris1234 --verb GET --raw --http ${HOST_IP}:8000/api/v1/ \
+    --quiet --jsonpprintindent 4
+```
+### Receive
+
+```javascript
+{
+  "collection": {
+    "items": [ ],
+    "links": [
+      { "href": "http://10.17.24.163:8000/api/v1/tags/", "rel": "tags" },
+      { "href": "http://10.17.24.163:8000/api/v1/plugins/", "rel": "plugins" }
+    ],
+    "queries": [
+      {
+        "data": [
+          { "name": "name", "value": "" },
+          { "name": "min_id", "value": "" },
+          { "name": "max_id", "value": "" },
+          { "name": "min_creation_date", "value": "" },
+          { "name": "max_creation_date", "value": "" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/search/",
+        "rel": "search"
+      }
+    ],
+    "version": "1.0",
+    "href": "http://10.17.24.163:8000/api/v1/"
+  }
+}
+```
+
+## GET list of plugins
+
+### Call
+```bash
+pfurl --auth chris:chris1234 --http ${HOST_IP}:8000/api/v1/plugins/ \
+    --quiet --jsonpprintindent 4
+```
+
+### Receive
+
+```javascript
+{
+  "collection": {
+    "items": [
+      {
+        "links": [
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/2/parameters/",
+            "rel": "parameters"
+          },
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/2/instances/",
+            "rel": "instances"
+          }
+        ],
+        "data": [
+          { "name": "name", "value": "simpledsapp" },
+          { "name": "dock_image", "value": "fnndsc/pl-simpledsapp" },
+          { "name": "type", "value": "ds" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/plugins/2/"
+      },
+      {
+        "links": [
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/4/parameters/",
+            "rel": "parameters"
+          },
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/4/instances/",
+            "rel": "instances"
+          }
+        ],
+        "data": [
+          { "name": "name", "value": "pacsretrieve" },
+          { "name": "dock_image", "value": "fnndsc/pl-pacsretrieve" },
+          { "name": "type", "value": "ds" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/plugins/4/"
+      },
+      {
+        "links": [
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/1/parameters/",
+            "rel": "parameters"
+          },
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/1/instances/",
+            "rel": "instances"
+          }
+        ],
+        "data": [
+          { "name": "name", "value": "simplefsapp" },
+          { "name": "dock_image", "value": "fnndsc/pl-simplefsapp" },
+          { "name": "type", "value": "fs" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/plugins/1/"
+      },
+      {
+        "links": [
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/3/parameters/",
+            "rel": "parameters"
+          },
+          {
+            "href": "http://10.17.24.163:8000/api/v1/plugins/3/instances/",
+            "rel": "instances"
+          }
+        ],
+        "data": [
+          { "name": "name", "value": "pacsquery" },
+          { "name": "dock_image", "value": "fnndsc/pl-pacsquery" },
+          { "name": "type", "value": "fs" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/plugins/3/"
+      }
+    ],
+    "links": [{ "href": "http://10.17.24.163:8000/api/v1/", "rel": "feeds" }],
+    "queries": [
+      {
+        "data": [
+          { "name": "name", "value": "" },
+          { "name": "dock_image", "value": "" },
+          { "name": "type", "value": "" },
+          { "name": "min_creation_date", "value": "" },
+          { "name": "max_creation_date", "value": "" }
+        ],
+        "href": "http://10.17.24.163:8000/api/v1/plugins/search/",
+        "rel": "search"
+      }
+    ],
+    "version": "1.0",
+    "href": "http://10.17.24.163:8000/api/v1/plugins/"
+  }
+}
+````
+
+In the above, the ``pl-simplefsapp`` plugin's instances collection is at ``http://10.17.24.163:8000/api/v1/plugins/1/instances/``.
+
+## Run the ``pl-simplefsapp`` container
+
+### Call
+
+#### Using httpie
+```bash
+http -a chris:chris1234 POST http://${HOST_IP}:8000/api/v1/plugins/1/instances/ \
+Content-Type:application/vnd.collection+json \
+Accept:application/vnd.collection+json \
+template:='{"data":[{"name":"dir","value":"./"}, {"name":"previous","value":""}]}'
+```
+
+### Using pfurl
+```bash
+pfurl --auth chris:chris1234 --verb POST --http ${HOST_IP}:8000/api/v1/plugins/1/instances/ \
+--content-type application/vnd.collection+json \
+--jsonwrapper 'template' --msg '
+{"data":
+    [{"name":"dir",
+      "value":"./"}, 
+     {"name":"previous",
+      "value":""}]
+}' \
+--quiet --jsonpprintindent 4
+```
